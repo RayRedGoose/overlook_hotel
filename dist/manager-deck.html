@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Manage reservations</title>
+  </head>
+  <body class="deck">
+    <header>
+      <img src="./images/avatar.svg" alt="space rocket avatar image">
+      <section class="user">
+        <h2 tabindex="0"></h2>
+        <div>
+          <button type="button" name="logout">logout</button>
+          <button type="button" name="find-user-preview">find user</button>
+        </div>
+      </section>
+      <section class="title-logo">
+        <h1 tabindex="0">OVERLOOK</h1>
+        <p tabindex="0">Manager Mode</p>
+      </section>
+      <section class="date">
+        <h2 tabindex="0"></h2>
+        <p>Today's date</p>
+      </section>
+      <div id="clock">
+        <ul class="spin">
+          <li class="hour hr1"><span>1</span></li>
+          <li class="hour hr2"><span>2</span></li>
+          <li class="hour hr3"><span>3</span></li>
+          <li class="hour hr4"><span>4</span></li>
+          <li class="hour hr5"><span>5</span></li>
+          <li class="hour hr6"><span>6</span></li>
+          <li class="hour hr7"><span>7</span></li>
+          <li class="hour hr8"><span>8</span></li>
+          <li class="hour hr9"><span>9</span></li>
+          <li class="hour hr10"><span>10</span></li>
+          <li class="hour hr11"><span>11</span></li>
+          <li class="hour hr12"><span>12</span></li>
+        </ul>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="core"></div>
+      </div>
+    </header>
+    <main class="manager-board">
+      <section tabindex="0" class="toggle-block">
+        <header>
+          <h2 class="section-title">Occupied</h2>
+        </header>
+        <main>
+          <div class="chart" id="full" data-pct="">
+            <svg width="200" height="200" viewPort="0 0 100 100">
+              <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+              <circle class="indicator" id="full-indicator" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
+            </svg>
+          </div>
+        </main>
+      </section>
+      <section tabindex="0" class="toggle-block">
+        <header>
+          <h2 class="section-title">Find user</h2>
+        </header>
+        <main>
+          <h3 class='error-message'>User has not been found!</h3>
+          <form class="find-user-form" action="index.html" method="post">
+            <div class="input">
+              <label for="find-user-name">Name</label>
+              <input id="find-user-name" type="name" name="name" value="">
+            </div>
+            <div class="input">
+              <label for="find-user-lastname clicked">Last name</label>
+              <input id="find-user-lastname" type="name" name="name" value="">
+            </div>
+            <button type="button" name="find-user">find</button>
+          </form>
+        </main>
+      </section>
+      <section tabindex="0" class="available-room-block">
+        <header>
+          <h2 class="section-title">Available</h2>
+        </header>
+        <main>
+          <p class="number"></p>
+          <div class="line-chart" id="rooms">
+            <div id="residential" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+            <div id="suite" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+            <div id="junior" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+            <div id="single" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+          </div>
+        </main>
+      </section>
+      <section tabindex="0" class="total-revenue-block">
+        <header>
+          <h2 class="section-title">Total revenue</h2>
+        </header>
+        <main>
+          <p class="number"></p>
+          <div class="line-chart" id="revenue">
+            <div id="today" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+            <div id="yesterday" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+            <div id="before" class="line" data-info="" data-num=""><span class="line-indicator"></span></div>
+          </div>
+        </main>
+      </section>
+    </main>
+  <script type="text/javascript" src="main.bundle.js"></script></body>
+</html>
