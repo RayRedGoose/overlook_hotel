@@ -32,11 +32,13 @@ let hotel,
 
 
 $(document).ready(function() {
-  (window.location.pathname === '/')
+  const pathnameParts = window.location.pathname.split('/');
+  const lastPart = pathnameParts[pathnameParts.length - 1];
+  (lastPart === '' || lastPart === 'index.html')
     ? loadEventListenerForLoginPage()
     : loadUtilities();
-  if (window.location.pathname === '/manager-deck.html') { loadManagerDeck(); }
-  if (window.location.pathname === '/customer-deck.html') { loadUserDeck(); }
+  if (lastPart === 'manager-deck.html') { loadManagerDeck(); }
+  if (lastPart === 'customer-deck.html') { loadUserDeck(); }
 
   $('.input label').on('click', function() {
     $(this).addClass('clicked');
@@ -52,9 +54,18 @@ $(document).ready(function() {
 });
 
 function loadEventListenerForLoginPage() {
+  checkUserLogged();
   $('.login-form button').on('click', function() {
     (makeValidation()) ? redirect() : toggleError('.login-form');
   });
+}
+
+function checkUserLogged() {
+  const userType = localStorage.getItem('user');
+  if (userType) {
+    const user = $('input[type="radio"]:checked').val();
+    window.location = `./${user}-deck.html`;
+  }
 }
 
 function makeValidation() {
@@ -96,6 +107,10 @@ function loadUtilities() {
 }
 
 function loadManagerDeck() {
+  const userType = localStorage.getItem('user');
+  if (userType !== 'manager') {
+    window.location = './index.html';
+  }
   manager = new Manager('manager');
   Promise.all([
     hotel.getAPIData(
