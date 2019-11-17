@@ -108,7 +108,8 @@ function loadUtilities() {
 
 function loadManagerDeck() {
   const userType = localStorage.getItem('user');
-  if (userType !== 'manager') {
+  const managerMode = localStorage.getItem('managerMode');
+  if (userType !== 'manager' || managerMode) {
     window.location = './index.html';
   }
   manager = new Manager('manager');
