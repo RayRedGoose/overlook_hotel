@@ -1,0 +1,42 @@
+/* ***ROOM PREVIEW BLOCK STYLES*** */
+.room-preview {
+  align-self: center;
+  display: grid;
+  grid-column-gap: 10px;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 'room title' 'room beds' 'room price' 'btn btn';
+  margin-bottom: 5px;
+  max-height: 95px;
+  position: relative;
+  img {
+    justify-self: end;
+    grid-area: room;
+    border: $border-style;
+    border-radius: 5px;
+    width: 150px; height: 95px;
+  }
+  h4 {
+    grid-area: title;
+  }
+}
+
+.booking-day {
+  border: $border-style;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  background-color: hsla(0, 15%, 19%, 0.8);
+  color: $light-color;
+  grid-area: room;
+  justify-self: end;
+  align-self: start;
+  position: relative;
+  text-align: center;
+  padding: 5px;
+  width: 150px;
+  z-index: 30px;
+}
+
+.time-today {
+  display: none;
+}

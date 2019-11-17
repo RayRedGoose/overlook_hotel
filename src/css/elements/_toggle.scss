@@ -1,0 +1,54 @@
+/* ***USER TOGGLE STYLES*** */
+
+.user_choice {
+	position: relative;
+	height: 43px;
+	width: 326px;
+	margin: 20px auto 40px;
+	color: $inactive-color;
+	border-radius: 5px;
+	border: $border-style;
+  input {
+    display: none;
+  }
+}
+
+.switch-label {
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 160px;
+	line-height: 38px;
+	color: $inactive-color;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+  	color: $accent-color;
+  }
+  &:active {
+  	color: $light-color;
+  }
+}
+
+.switch-input {
+  &:checked + .switch-label {
+  	color: $light-color;
+  	@include transition(none);
+  	@include transition-property;
+  }
+  &:checked + .switch-label-to-cstm ~ .selection-indicator {
+  	left: 162px;
+  }
+}
+
+.selection-indicator {
+	display: block;
+	width: 156px;
+	height: 32px;
+	border-radius: 5px;
+	background-color: $accent-color;
+	position: absolute;
+	top: 4px; left: 4px;
+	z-index: 1;
+  @include transition (left);
+}

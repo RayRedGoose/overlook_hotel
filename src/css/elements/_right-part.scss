@@ -1,0 +1,36 @@
+/* ***LEFT SIDE OF USER BOARD STYLES*** */
+.right-side-board {
+  grid-area: today;
+  .unactive {
+    cursor: pointer;
+    @extend %inactive-mode;
+    &:hover {
+      color: $accent-color;
+      border-bottom-color: $accent-color;
+    }
+  }
+  .upcoming-preview,
+  .history-preview {
+    display: none;
+  }
+  main {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'f-column s-column';
+    max-height: 510px;
+    overflow-y: scroll;
+    &.today-preview {
+      section {
+        align-items: start;
+        grid-area: s-column;
+        p {
+          margin: 0 auto 10px;
+        }
+        h3 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+/* ***LOGIN PAGE STYLES*** */
+.logo {
+  padding: 20px;
+  width: 40%;
+  @extend %blur;
+}
+
+.login-form {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  width: 40%;
+  @extend %blur;
+  h2 {
+    text-align: left;
+    font-weight: 400;
+  }
+}

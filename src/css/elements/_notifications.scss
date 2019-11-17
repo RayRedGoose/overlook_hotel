@@ -1,0 +1,16 @@
+/* *** NOTIFICATIONS *** */
+.error-message {
+  color: $light-color;
+  background-color: $error-color;
+  box-shadow: $error-shadow;
+  border-radius: 5px;
+  display: none;
+  padding: 10px;
+}
+
+.message {
+  align-self: center;
+  display: none;
+  line-height: 1.5em;
+  text-align: left;
+}

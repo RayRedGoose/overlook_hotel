@@ -1,0 +1,14 @@
+/* ***USER DECK STYLES*** */
+.user-board {
+  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-areas: 'new today';
+  section {
+    header {
+      @include flex-custom(row, flex-start, space-between);
+      margin-bottom: 40px;
+      h2 {
+        margin: 0
+      }
+    }
+  }
+}

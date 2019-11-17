@@ -1,0 +1,62 @@
+@mixin transition ($side) {
+  @if $side = left {
+    -webkit-transition: $side 0.15s ease-out;
+  	-moz-transition: $side 0.15s ease-out;
+  	-ms-transition: $side 0.15s ease-out;
+  	-o-transition: $side 0.15s ease-out;
+  	transition: $side 0.15s ease-out;
+  } else {
+    -webkit-transition: 0.15s ease-out;
+  	-ms-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+  	transition: 0.15s ease-out;
+  }
+}
+
+@mixin transition-property {
+  -webkit-transition-property: color, text-shadow;
+	-moz-transition-property: color, text-shadow;
+	-ms-transition-property: color, text-shadow;
+	-o-transition-property: color, text-shadow;
+	transition-property: color, text-shadow;
+}
+
+@mixin bg-image-full($link, $size) {
+  background: none;
+  background-image: url($link);
+  background-size: $size;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin adjust-hue($index) {
+  @if $index > 0 {
+    .hr#{$index} {
+  		transform: rotate($index*30deg);
+  		&>span {
+  			transform: rotate($index*-30deg);
+  		}
+  	}
+  	@include adjust-hue($index - 1);
+  }
+}
+
+@mixin grid-custom($columns, $rows, $areas) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  grid-template-areas: $areas;
+}
+
+@mixin flex-custom($dir, $align, $jstf) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $jstf;
+}
+
+@mixin round($size) {
+  height: $size; width: $size;
+  border-radius: 50%;
+}

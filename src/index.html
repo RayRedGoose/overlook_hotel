@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Overlook Management Tool</title>
+  </head>
+  <body class="login-page">
+    <main class="login-page">
+      <header class="logo">
+        <h2>Welcome to</h2>
+        <h1 tabindex="0">Overlook</h1>
+      </header>
+      <form class="login-form" action="deck.html" method="post">
+        <h2>Login to an app as...</h2>
+        <h3 class='error-message'>User has not been found!</h3>
+        <div role="toggle user" class="user_choice">
+          <input type="radio" class="switch-input" name="email_choice" id="choice_to-mngr" value="manager" checked>
+          <label tabindex="0" for="choice_to-mngr" class="switch-label switch-label-to-mngr">Manager</label>
+          <input type="radio" class="switch-input" name="email_choice" id="choice_to-cstm" value="customer">
+          <label tabindex="0" for="choice_to-cstm" class="switch-label switch-label-to-cstm">Customer</label>
+          <span class="selection-indicator"></span>
+        </div>
+        <div class="input">
+          <label for="username">username</label>
+          <input id="username" type="text" name="username">
+        </div>
+        <div class="input">
+          <label for="password">password</label>
+          <input id="password" type="password" name="password">
+        </div>
+        <button type="button" name="login">Login</button>
+      </form>
+    </main>
+  </body>
+</html>

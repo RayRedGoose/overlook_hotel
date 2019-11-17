@@ -1,0 +1,16 @@
+$accent-color: hsla(0, 15, 19, 1);
+$light-color: hsla(0, 0, 100, 1);
+$inactive-color: hsla(0, 0, 50, 1);
+$chart-bg-color: hsla(0, 0, 80, 1);
+$mode-color: hsla(210, 100, 17, 1);
+$error-color:  #B21A29;
+
+$accent-font: 'Cinzel Decorative', cursive;
+$base-font: 'Roboto Slab', serif;
+
+$light-shadow: 0 0 4px 0 $light-color;
+$dark-shadow: 0 0 4px 0 $accent-color;
+$error-shadow: 0 0 4px 0 $error-color;
+
+$border-style: 2px solid $accent-color;
+$border-small-style: 1px solid $accent-color;

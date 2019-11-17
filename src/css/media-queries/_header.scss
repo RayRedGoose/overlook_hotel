@@ -1,0 +1,80 @@
+@media only screen and (max-width: 950px) {
+  .deck>header {
+    .user>div {
+      display: flex;
+      flex-direction: column;
+      button[name="find-user-preview"] {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .deck>header {
+    padding: 15px !important;
+    &>img {
+      display: none;
+    }
+    #clock {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .deck>header {
+    display: grid !important;
+    grid-template-areas:  'logo logo' 'user date';
+    .title-logo {
+      grid-area: logo;
+      position: initial;
+      justify-self: center;
+      margin-bottom: 20px;
+    }
+    .user {
+      grid-area: user;
+      div {
+        flex-direction: row;
+        align-items: center;
+        button[name="find-user-preview"] {
+          margin-top: 0;
+        }
+      }
+    }
+    .date {
+      grid-area: date;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .deck>header {
+    justify-items: stretch;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-areas:  'logo' 'date' 'user';
+    .title-logo {
+      width: 100%;
+    }
+    .user,
+    .date {
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .user {
+      flex-direction: column;
+      button:first-child {
+        margin-left: 0;
+      }
+    }
+    .date {
+      p {
+        display: none;
+      }
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+/* ***LEFT SIDE OF USER BOARD STYLES*** */
+.left-side-board {
+  grid-area: new;
+  h2 {
+    margin: 0 60px 40px;
+  }
+  .input {
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    input {
+      padding: 5px 20px;
+      width: 50%;
+    }
+    label[for="date-booking"] {
+      @extend .clicked;
+    }
+  }
+}
+
+.buttons {
+  span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin: 0 15px 10px;
+  }
+}
+
+.labels {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0 10px;
+  p {
+    border-radius: 20px;
+    @extend %accent-colors-style;
+    margin-right: 7px;
+    margin-bottom: 5px;
+    padding: 0.5em 2em;
+  }
+}
+
+.book-preview {
+  padding: 10px;
+  margin-top: 40px;
+  max-height: 360px;
+  overflow-y: scroll;
+  .message {
+    text-align: center;
+  }
+  div {
+    max-height: 127px;
+    margin-bottom: 20px;
+  }
+}

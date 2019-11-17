@@ -1,0 +1,76 @@
+/* ***CLOCK STYLES*** */
+
+#clock {
+	ul {
+		@include round(80px);
+    transform: rotate(-3deg);
+    @include adjust-hue(12);
+    li {
+      list-style-type: none;
+    }
+		.hour {
+      height: 76px;
+      font-size: 0.6rem;
+      position: absolute;
+      top: 2px; left: 37.5px;
+			span {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+#hour {
+  height: 100%;
+  width: 3px;
+  position: absolute;
+  top: 0; left: 50%;
+  &:after {
+		@extend %clock-lines;
+    height: 30%; width: 100%;
+  }
+}
+
+#minute {
+  height: 100%;
+  width: 2px;
+  position: absolute;
+  top: -0.5px; left: 51%;
+  margin-left: 0.4px;
+	&:after {
+		@extend %clock-lines;
+    height: 35%; width: 100%;
+  }
+}
+
+#second {
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  top: 0; left: 52%;
+  &:after {
+		@extend %clock-lines;
+    height: 40%; width: 100%;
+  }
+}
+
+#core {
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  top: 50%; left: 50%;
+  &:after {
+		@extend %clock-lines;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+  }
+}
+
+%clock-lines {
+	content: "";
+	display: block;
+	background: $light-color;
+	position: absolute;
+	bottom: 50%;
+}

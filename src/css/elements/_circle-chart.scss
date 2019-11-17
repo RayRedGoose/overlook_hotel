@@ -1,0 +1,31 @@
+/* ***CIRCLE CHART STYLES*** */
+.chart {
+  circle {
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke: $chart-bg-color;
+  stroke-width: 1em;
+  }
+  .indicator {
+    stroke: $accent-color;
+    stroke-linecap: round;
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+}
+
+.chart {
+  margin: 40px auto 0;
+  display: block;
+  @include round(200px);
+  position: relative;
+  &:after {
+    content: attr(data-pct)'%';
+    display: block;
+    font-size: 3em;
+    position: absolute;
+    top: 34%; left: 27%;
+    text-align: center;
+    @include round(50%);
+  }
+}

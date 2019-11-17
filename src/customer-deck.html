@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+  <head>
+    <meta charset="utf-8">
+    <title>Make a reservation</title>
+  </head>
+  <body class="deck">
+    <header>
+      <img src="./images/user.svg" alt="woman avatar">
+      <section class="user">
+        <h2 tabindex="0"></h2>
+        <div>
+          <button type="button" name="logout">logout</button>
+          <button type="button" name="back">back</button>
+        </div>
+      </section>
+      <section class="title-logo">
+        <h1 tabindex="0">OVERLOOK</h1>
+        <p tabindex="0" class="customer-mode">Manager Mode</p>
+      </section>
+      <section class="date">
+        <h2 tabindex="0"></h2>
+        <p>Today's date</p>
+      </section>
+      <div id="clock">
+        <ul class="spin">
+          <li class="hour hr1"><span>1</span></li>
+          <li class="hour hr2"><span>2</span></li>
+          <li class="hour hr3"><span>3</span></li>
+          <li class="hour hr4"><span>4</span></li>
+          <li class="hour hr5"><span>5</span></li>
+          <li class="hour hr6"><span>6</span></li>
+          <li class="hour hr7"><span>7</span></li>
+          <li class="hour hr8"><span>8</span></li>
+          <li class="hour hr9"><span>9</span></li>
+          <li class="hour hr10"><span>10</span></li>
+          <li class="hour hr11"><span>11</span></li>
+          <li class="hour hr12"><span>12</span></li>
+        </ul>
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+        <div id="core"></div>
+      </div>
+    </header>
+    <main class="user-board">
+      <section tabindex="0" class="left-side-board">
+        <h2 class="section-title">Reserve room</h2>
+        <main>
+          <div class="input">
+            <label for="date-booking">Date</label>
+            <input id="date-booking" type="date" min="2014-05-11">
+          </div>
+          <div class="labels">
+            <p tabindex="0" id="clear-labels">Clear</p>
+          </div>
+          <div class="buttons first-click">
+            <span>Room type: </span>
+            <button name="filter">residential suite</button>
+            <button name="filter">junior suite</button>
+            <button name="filter">suite</button>
+            <button name="filter">single room</button>
+          </div>
+          <div class="buttons second-click">
+            <span>Bed size: </span>
+            <button name="filter">king</button>
+            <button name="filter">queen</button>
+            <button name="filter">full</button>
+            <button name="filter">twin</button>
+          </div>
+          <section class="book-preview">
+            <h3 class="error-message">Date has not been selected.</h3>
+            <h3 class="message">There is no available rooms! Please, change search parameters.</h3>
+          </section>
+        </main>
+      </section>
+      <section tabindex="0" class="right-side-board">
+        <header>
+          <h2 tabindex="0" class="preview-tab section-title" data-type="today">Today</h2>
+          <h2 tabindex="0" class="preview-tab section-title unactive" data-type="upcoming">Upcoming</h2>
+          <h2 tabindex="0" class="preview-tab section-title unactive" data-type="history">History</h2>
+        </header>
+        <main tabindex="0" class="today-preview" data-lenght="3">
+          <h3 class="message">You don't have any booking today!</h3>
+          <section>
+            <p tabindex="0" class="number"></p>
+            <h3>Total spent</h3>
+          </section>
+        </main>
+        <main tabindex="0" class="upcoming-preview" data-lenght="3">
+          <h3 class="message">You don't have any upcoming booking!</h3>
+        </main>
+        <main tabindex="0" class="history-preview" data-lenght="3">
+          <h3 class="message">You don't have any past booking</h3>
+        </main>
+      </section>
+    </main>
+  </body>
+</html>
