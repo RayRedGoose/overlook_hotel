@@ -109,9 +109,6 @@ function loadUtilities() {
 function loadManagerDeck() {
   const userType = localStorage.getItem('user');
   const managerMode = localStorage.getItem('managerMode');
-  if (userType !== 'manager' && !managerMode) {
-    window.location = './index.html';
-  }
   manager = new Manager('manager');
   Promise.all([
     hotel.getAPIData(
