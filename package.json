@@ -13,8 +13,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rayredgoose/overlook_hotel.git",
-    "homepage": "http://rayredgoose.github.io/overlook_hotel"
+    "url": "git+https://github.com/rayredgoose/Overlook.git",
+    "homepage": "http://rayredgoose.github.io/Overlook"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",

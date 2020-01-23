@@ -54,18 +54,9 @@ $(document).ready(function() {
 });
 
 function loadEventListenerForLoginPage() {
-  checkUserLogged();
   $('.login-form button').on('click', function() {
     (makeValidation()) ? redirect() : toggleError('.login-form');
   });
-}
-
-function checkUserLogged() {
-  const userType = localStorage.getItem('user');
-  if (userType) {
-    const user = $('input[type="radio"]:checked').val();
-    window.location = `./${user}-deck.html`;
-  }
 }
 
 function makeValidation() {
