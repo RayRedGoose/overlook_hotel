@@ -10,6 +10,8 @@ Customers can see their own past and future bookings, total spent amount for all
 
 Manager can see occupied room percent for today, a number of available rooms (total and specific type) and total revenue for today and last two days. Also manager has access to any customer's bookings through customer board in manager mode. In addition to customer's action manager can remove any future booking.
 
+[DEPLOYED APP](https://rayredgoose.github.io/Overlook)
+
 ## Used technologies
 
 - Bundled with `webpack`
