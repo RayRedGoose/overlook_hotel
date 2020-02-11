@@ -1,6 +1,6 @@
 # OVERLOOK HOTEL MANAGEMENT TOOL
 
-### Designed and created by Raisa Primerova (@rayredgoose)
+### Designed and created by [Raisa Primerova](https://github.com/RayRedGoose)
 
 ## Overview
 
