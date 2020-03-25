@@ -10,7 +10,22 @@ Customers can see their own past and future bookings, total spent amount for all
 
 Manager can see occupied room percent for today, a number of available rooms (total and specific type) and total revenue for today and last two days. Also manager has access to any customer's bookings through customer board in manager mode. In addition to customer's action manager can remove any future booking.
 
+## Setup
+
 [DEPLOYED APP](https://rayredgoose.github.io/Overlook)
+
+- `clone` the repo to your local machine
+
+- run `npm install` to download all necessary dependencies
+
+- run `npm start` to run the server
+
+- open `localhost:8080` (unless your terminal says otherwise)
+
+- use `manager` as username and `overlook2019` as a password to go to manager board
+
+- use `customer1` (or any other number from 1 to 50, a number is an id of user) as username and `overlook2019` as a password to go to manager board
+
 
 ## Used technologies
 
@@ -62,16 +77,3 @@ Manager can see occupied room percent for today, a number of available rooms (to
 
 ![See bookings animation](/src/images/screenshots/see-booking-animation.gif)
 
-## Setup
-
-- `clone` the repo to your local machine
-
-- run `npm install` to download all necessary dependencies
-
-- run `npm start` to run the server
-
-- open `localhost:8080` (unless your terminal says otherwise)
-
-- use `manager` as username and `overlook2019` as a password to go to manager board
-
-- use `customer1` (or any other number from 1 to 50, a number is an id of user) as username and `overlook2019` as a password to go to manager board
