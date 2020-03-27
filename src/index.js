@@ -40,6 +40,10 @@ $(document).ready(function() {
   if (lastPart === 'manager-deck.html') { loadManagerDeck(); }
   if (lastPart === 'customer-deck.html') { loadUserDeck(); }
 
+  if ($('.input input').val()) {
+    $('.input label').addClass('clicked');
+  };
+
   $('.input label').on('click', function() {
     $(this).addClass('clicked');
   });
@@ -54,6 +58,13 @@ $(document).ready(function() {
 });
 
 function loadEventListenerForLoginPage() {
+  $('.switch-input').on('click', function() {
+    const user = $('input[type="radio"]:checked').val();
+    console.log(user);
+    if (user === 'manager') $('#username').val('manager');
+    if (user === 'customer') $('#username').val('customer01');
+  });
+
   $('.login-form button').on('click', function() {
     (makeValidation()) ? redirect() : toggleError('.login-form');
   });
